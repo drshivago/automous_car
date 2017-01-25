@@ -5,14 +5,14 @@ import time
 GPIO.setmode(GPIO.BOARD)
 
 #drive
-#forward
+#forward(purple)
 GPIO.setup(11, GPIO.OUT)
-#backward
+#backward(black
 GPIO.setup(12, GPIO.OUT)
 #steering
-#left
+#left(yellow)
 GPIO.setup(15, GPIO.OUT)
-#right
+#right(green)
 GPIO.setup(16, GPIO.OUT)
 
 camera = picamera.PiCamera()
