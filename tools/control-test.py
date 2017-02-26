@@ -33,14 +33,14 @@ while key != 'q':
     key = raw_input()
     if key == 'w':
         direct = 'forward'
-    if forard:
-        GPIO.output([15, 16], GPIO.LOW)
-        forard = False
-        side = ''
-    GPIO.output(12, GPIO.LOW)
-    GPIO.output(11, GPIO.HIGH)
-    forard = True
-    bakk = False
+        if forard:
+            GPIO.output([15, 16], GPIO.LOW)
+            forard = False
+            side = ''
+        GPIO.output(12, GPIO.LOW)
+        GPIO.output(11, GPIO.HIGH)
+        forard = True
+        bakk = False
     if key == 'a':
         side = 'left'
         GPIO.output(16, GPIO.LOW)
@@ -51,14 +51,14 @@ while key != 'q':
         GPIO.output(16, GPIO.HIGH)
     if key == 's':
         direct = 'reverse'
-    if bakk:
-        GPIO.output([15, 16], GPIO.LOW)
-        bakk = False
-        side = ''
-    GPIO.output(11, GPIO.LOW)                
-    GPIO.output(12, GPIO.HIGH)
-    bakk = True
-    forard = False
+        if bakk:
+            GPIO.output([15, 16], GPIO.LOW)
+            bakk = False
+            side = ''
+        GPIO.output(11, GPIO.LOW)                
+        GPIO.output(12, GPIO.HIGH)
+        bakk = True
+        forard = False
     if key == 'f':
         direct = 'full stop'
         side = ''

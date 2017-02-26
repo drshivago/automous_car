@@ -1,7 +1,6 @@
 import io
 import socket
 import struct
-from PIL import image
 
 server_socket = socket.socket()
 server_socket.bind(('0.0.0.0', 8000))

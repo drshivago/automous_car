@@ -10,8 +10,8 @@ camera.vflip = True
 camera.hflip = True
 rawCapture = PiRGBArray(camera, size=(640,480))
 time.sleep(0.5)
-thresholdlow = 20
-thresholdhigh = 70
+thresholdlow = 40
+thresholdhigh = 80
 
 for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
 
