@@ -7,7 +7,7 @@ server_socket = socket.socket()
 server_socket.bind(('0.0.0.0', 8000))
 server_socket.listen(0)
 
-connection = server_socket.accept()[0].makefile(‘rb’)
+connection = server_socket.accept()[0].makefile('rb')
 try:
 	while True:
 		image_len - struct.unpack('<L', connection.read(struct.calcsize('<L')))[0]
