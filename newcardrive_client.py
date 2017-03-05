@@ -15,9 +15,9 @@ try:
 	camera.resolution = rez
 
 	
-	start_recording(connection, format= h264)
+	camera.start_recording(connection, format= h264)
 
 finnaly:
-	stop_recording()
+	camera.stop_recording()
 	connection.close()
 	client_socket.close()
