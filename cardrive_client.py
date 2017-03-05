@@ -6,10 +6,10 @@ server_socket = socket.socket()
 server_socket.bind(('0.0.0.0', 8000))
 server_socket.listen(0)
 
-connection = server_socket.accept()[0].makefile('rb')
+connection = server_socket.accept()[0].makefile('r')
 try:
 	while True:
-		image_len - struct.unpack('<L', connection.read(struct.calcsize('<L')))[0]
+		image_len = struct.unpack('<L', connection.read(struct.calcsize('<L')))[0]
 		if not image_len:
 			break
 		image_stream = io.BytesIO()
