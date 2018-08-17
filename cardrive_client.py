@@ -2,9 +2,11 @@ import io
 import socket
 import struct
 
+# RUN THIS ON THE COMPUTER
+
 server_socket = socket.socket()
-server_socket.bind(('0.0.0.0', 8000))
-server_socket.listen(0)
+server_socket.bind(('10.0.0.60', 8000))
+server_socket.listen()
 
 connection = server_socket.accept()[0].makefile('r')
 try:
