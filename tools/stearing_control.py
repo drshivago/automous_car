@@ -30,7 +30,7 @@ def go_forth(a):
     forward()
     time.sleep(a)
     stop()
-    time.sleep(a/10.0)
+    time.sleep(5)
     
 def right():
     GPIO.output(15, GPIO.LOW)
@@ -51,12 +51,12 @@ def stop():
     GPIO.output(11, GPIO.LOW)
     GPIO.output(12, GPIO.LOW)
 
-t_end = time.time() + 1.5
+t_end = time.time() + 4
 
 while time.time() < t_end:
     
-    turn_left(1)
-    #go_forth(0.5)
-    
+    #turn_left(1)
+    go_forth(0.5)
+
 
 GPIO.cleanup()

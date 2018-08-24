@@ -21,8 +21,10 @@ camera.framerate = 30
 camera.vflip = True
 
 time.sleep(2)
+
+
 #camera.start_recording('drivingvideo.h264', format='h264')
-camera.start_preview()
+#camera.start_preview()
 key = ''
 forard = False
 bakk = False
@@ -71,3 +73,4 @@ camera.stop_preview()
 #camera.stop_recording()
 
 GPIO.cleanup()
+quit()
